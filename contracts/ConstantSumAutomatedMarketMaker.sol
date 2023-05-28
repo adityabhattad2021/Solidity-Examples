@@ -42,6 +42,11 @@ contract CSAMM {
             "Token not supported by the exchange"
         );
 
+        require(
+            _amountIn>0,
+            "Amount In = 0"
+        );
+
         bool isToken0 = _tokenIn == address(token0);
         (
             IERC20 tokenIn,
